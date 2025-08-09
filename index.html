@@ -256,7 +256,7 @@
     function closeModal(){ document.getElementById('modal').style.display='none'; }
 
     // open WhatsApp to owner (replace number) — short link
-    function openWhatsApp(){ const owner = '919047711276'; window.open(`https://wa.me/${owner}`, '_blank') }
+    function openWhatsApp(){ const owner = '919047711276'; window.open(`https://wa.me/qr/LVXJHMBE43ZTE1{owner}`, '_blank') }
     function openCall(){ window.location.href = 'tel:+919047711276' }
     function scrollTo(sel){ document.querySelector(sel).scrollIntoView({behavior:'smooth'}); }
 
@@ -271,7 +271,7 @@
 Phone: ${phone}
 Email: ${email}
 Message: ${message}`);
-      window.open(`https://wa.me/${owner}?text=${txt}`, '_blank');
+      window.open(`https://wa.me/qr/LVXJHMBE43ZTE1{owner}?text=${txt}`, '_blank');
     }
 
     // Appointment form: notify owner and save local
@@ -289,7 +289,7 @@ Phone: ${phone}
 Service: ${service}
 When: ${date} ${time}`);
       // open WhatsApp to notify owner
-      window.open(`https://wa.me/${owner}?text=${txt}`, '_blank');
+      window.open(`https://wa.me/qr/LVXJHMBE43ZTE1{owner}?text=${txt}`, '_blank');
 
       // save locally too
       const apps = JSON.parse(localStorage.getItem('msm_apps')||'[]');
@@ -350,5 +350,6 @@ When: ${date} ${time}`);
   </script>
 </body>
 </html>
+
 
 
